@@ -1,4 +1,4 @@
-1. environment<br\>
+1. environment<p>
 python3.5
 
 2. CNN directory/br
