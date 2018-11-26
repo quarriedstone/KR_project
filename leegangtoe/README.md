@@ -1,7 +1,7 @@
-1. environment
+1. environment/br
 python3.5
 
-2. CNN directory
+2. CNN directory/br
 basic CNN model for facial beauty analysis
 
 3. data directory
