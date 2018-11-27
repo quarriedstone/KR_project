@@ -1,0 +1,4 @@
+.project
+.pydevproject
+leegangtoe/CNN/models/*
+leegangtoe/CNN/logs/*
