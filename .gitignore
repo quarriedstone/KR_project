@@ -2,3 +2,4 @@
 .pydevproject
 leegangtoe/CNN/models/*
 leegangtoe/CNN/logs/*
+leegangtoe/data/*

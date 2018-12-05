@@ -2,20 +2,18 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-df_X = pd.read_csv('SCUT-FBP-1.csv', sep = ',')
-X=[]
-Y=[]
-Z=[]
-for i in range(67):
-    X.append(df_X.iloc[0][' x_'+str(i)])
-    Y.append(df_X.iloc[0][' y_'+str(i)])
-    Z.append(i)
-print(X)
-print(Y)
-
-fig, ax = plt.subplots()
-ax.scatter(X, Y)
-
-for i, txt in enumerate(Z):
-    ax.annotate(txt, (X[i], Y[i]))
-plt.show()
+array=[]
+for i in range(2000):
+    if (i+1==1112):
+        df_X = pd.read_csv('./processed/AF'+str(i)+'.csv', sep = ',')
+    else:
+        df_X = pd.read_csv('./processed/AF'+str(i+1)+'.csv', sep = ',')
+    inner_array=[]
+    for ii in range(68):
+        inner_array.append(df_X.iloc[0][' x_'+str(ii)])
+        inner_array.append(df_X.iloc[0][' y_'+str(ii)])
+    print(len(inner_array))
+    array.append(inner_array)
+np.array(array)
+        
+np.savetxt('./landmarks.txt', array, delimiter=',', fmt = '%.06f')

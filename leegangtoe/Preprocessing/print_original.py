@@ -3,10 +3,12 @@ import pandas as pd
 import numpy as np
 
 df_X = pd.read_csv('./landmarks.txt', sep = ',',header=None)
+print(df_X.shape)
 X=[]
 Y=[]
 Z=[]
-for i in range(67):
+
+for i in range(68):
     X.append(df_X.iloc[0][2*i])
     Y.append(df_X.iloc[0][2*i+1])
     Z.append(i)
